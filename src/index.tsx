@@ -7,7 +7,7 @@ import './assets/slick-theme.scss';
 import App from './App';
 import StoreProvider from './services/StoreContext';
 import * as serviceWorker from './serviceWorker';
-const baseRoute = window.location.hostname === 'avivabachi.github.io' ? '/shop-web' : '';
+const baseRoute = window.location.hostname === 'avivabachi.github.io' ? '/home-design' : '';
 
 ReactDOM.render(
    <StoreProvider>
