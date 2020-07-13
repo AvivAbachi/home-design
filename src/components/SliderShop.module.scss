@@ -1,0 +1,69 @@
+@import '../App';
+
+.shopCarousel {
+   width: 100%;
+   margin: 0 auto 105px;
+   :global(.slick-track) {
+      display: flex;
+      align-items: flex-end;
+   }
+   .carouselItem {
+      display: flex !important;
+      justify-content: center;
+      padding: 0 5% 36px;
+      .sliderIMG {
+         position: relative;
+         z-index: 0;
+         display: flex;
+         max-width: 900px;
+         cursor: pointer;
+         img {
+            width: 100%;
+            min-width: 360px;
+            object-fit: contain;
+         }
+         > div {
+            position: absolute;
+            right: 20px;
+            align-self: center;
+         }
+         &:hover svg {
+            transition: 0.25s ease-in-out fill !important;
+            fill: $Blue !important;
+         }
+      }
+      .sliderINFO {
+         display: flex;
+         flex-direction: column;
+         max-width: 620px;
+         margin-left: 64px;
+         p {
+            margin-bottom: 64px;
+         }
+      }
+   }
+}
+@media screen and (max-width: 768px) {
+   .shopCarousel {
+      margin: 8px auto -290px;
+      :global(.slick-dots) {
+         bottom: 280px !important;
+      }
+      .carouselItem {
+         flex-direction: column;
+         .sliderIMG {
+            max-height: 300px;
+         }
+         .sliderINFO {
+            margin: 84px auto 0;
+            text-align: center;
+            > h2 {
+               margin: 0 auto;
+            }
+            p {
+               margin-bottom: 36px !important;
+            }
+         }
+      }
+   }
+}

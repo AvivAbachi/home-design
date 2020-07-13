@@ -1,0 +1,168 @@
+@import '../App';
+
+.info {
+   width: 80%;
+   max-width: 1200px;
+   margin: 64px auto;
+   padding: 16px 36px;
+   border-radius: 24px;
+   background: white;
+   box-shadow: $shadowL;
+}
+.dropDown {
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   .buttonDropDown {
+      font-size: 24px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 24px;
+      cursor: pointer;
+      color: white;
+      border-radius: 32px;
+      background-color: $darkBlue;
+      box-shadow: $shadowM;
+      svg {
+         font-size: 20px;
+         margin-left: 16px;
+         stroke: white;
+      }
+      &:hover {
+         background-color: $Blue;
+      }
+   }
+   .innerDropDown {
+      position: absolute;
+      z-index: 1;
+      width: 308px;
+      padding-top: 44px;
+      div {
+         overflow: hidden;
+         border: 2px solid $darkBlue;
+         border-radius: 16px;
+         background-color: white;
+         box-shadow: $shadowM;
+         button {
+            width: 100%;
+            padding: 16px;
+            transition: opacity ease-in-out 0.25s;
+            &:hover {
+               background-color: $Light;
+            }
+         }
+      }
+   }
+}
+.tabSelector {
+   display: flex;
+   justify-content: center;
+   width: fit-content;
+   margin: 0 auto;
+   border-radius: 64px;
+   background-color: $Light;
+   box-shadow: $shadowS inset;
+   label {
+      font-size: 20px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      width: max-content;
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 64px;
+      &:hover:not(.active) {
+         cursor: pointer;
+         opacity: 0.5;
+      }
+      input {
+         display: none;
+      }
+   }
+   .active {
+      color: white;
+   }
+}
+.indcaitor {
+   position: absolute;
+   height: 44px;
+   margin-top: -44px;
+   border-radius: 64px;
+   background-color: $darkBlue;
+   box-shadow: $shadowS;
+}
+
+.reviewTab {
+   display: flex;
+   margin-top: 36px;
+   .spacer {
+      height: inherit;
+      margin: 0 24px;
+      padding: 0 2px;
+      border-radius: 15px;
+      background-color: $Light;
+   }
+   .rateBox {
+      .rateTitle {
+         display: flex;
+         align-items: baseline;
+         justify-content: space-between;
+         margin-bottom: 16px;
+         span {
+            font-size: 48px;
+            display: flex;
+            align-items: center;
+         }
+         p {
+            font-size: 20px;
+            margin-bottom: 0;
+         }
+      }
+      .var {
+         display: flex;
+         align-items: center;
+         width: fit-content;
+         margin-top: 24px;
+         cursor: pointer;
+         opacity: 0.25;
+         svg {
+            margin-left: 4px;
+         }
+         &:hover {
+            opacity: 0.5;
+         }
+      }
+      .active {
+         opacity: 1;
+      }
+   }
+}
+
+.TextBox {
+   margin: 36px 36px 16px;
+
+   h3 {
+      margin-bottom: 20px;
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 1080px) {
+   .info {
+      width: auto;
+      margin: 36px 0 64px;
+      border-radius: 0;
+   }
+   .reviewTab {
+      display: block;
+      margin-top: 16px;
+      .rateBox {
+         width: 90%;
+         margin: 0 auto 36px;
+      }
+   }
+   .TextBox {
+      margin: 36px 0 16px;
+   }
+}

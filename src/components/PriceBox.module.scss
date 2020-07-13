@@ -1,0 +1,61 @@
+@import '../App';
+
+.priceBox {
+   font-size: 36px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   span,
+   del {
+      z-index: 1;
+      color: white;
+   }
+   del {
+      font-size: 24px;
+   }
+   svg {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      fill: $darkBlue;
+      filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.16));
+   }
+}
+@media screen and (max-width: 1200px) {
+   .priceBox {
+      font-size: 28px;
+      del {
+         font-size: 20px;
+      }
+      svg {
+         width: 125px !important;
+         height: 125px !important;
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .priceBox {
+      font-size: 24px;
+      del {
+         font-size: 16px;
+      }
+      svg {
+         width: 105px !important;
+         height: 105px !important;
+      }
+   }
+}
+@media screen and (max-width: 768px) {
+   .priceBox {
+      font-size: 20px;
+      del {
+         font-size: 14px;
+      }
+      svg {
+         width: 100px !important;
+         height: 100px !important;
+      }
+   }
+}

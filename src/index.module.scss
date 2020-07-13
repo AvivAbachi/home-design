@@ -1,0 +1,74 @@
+@import 'fonts/font.css';
+@import 'App.scss';
+html {
+   scroll-behavior: smooth;
+}
+html,
+button,
+input {
+   font-family: 'NeutraText', 'Segoe UI', 'Roboto', 'Ubuntu', 'Droid Sans', Helvetica, Arial, sans-serif, -apple-system, BlinkMacSystemFont;
+   font-size: 16px;
+   line-height: normal;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background: $Light;
+}
+
+* {
+   box-sizing: border-box;
+   color: $darkBlue;
+   // outline: solid rgba(0, 204, 255, 0.5) 1px !important;
+}
+a,
+button,
+label,
+span,
+svg {
+   transition: opacity ease-in-out 0.25s;
+}
+*:before,
+*::after {
+   box-sizing: border-box;
+}
+a {
+   text-decoration: none;
+   &:hover {
+      opacity: 0.5;
+   }
+}
+button {
+   cursor: pointer;
+   border: 0;
+   outline: none;
+   background: none;
+   &:focus,
+   &:hover {
+      outline: none;
+   }
+}
+input::placeholder {
+   color: $grayBlue;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 400;
+   margin: 0;
+}
+h1 {
+   font-size: 48px;
+}
+h2 {
+   font-size: 36px;
+}
+h3 {
+   font-size: 24px;
+}
+h4 {
+   font-size: 20px;
+}

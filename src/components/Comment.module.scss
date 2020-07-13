@@ -1,0 +1,58 @@
+@import '../App';
+
+.comment {
+   display: flex;
+   margin: 64px 0 48px;
+   padding: 16px 32px;
+   border-radius: 20px;
+   background: $Light;
+   box-shadow: $shadowS;
+   .commentIMG {
+      position: absolute;
+      width: 84px;
+      height: 84px;
+      margin-top: -56px;
+      border-radius: 50%;
+      background: no-repeat center;
+      background-size: cover;
+      box-shadow: $shadowM;
+   }
+   .commentUser {
+      display: flex;
+      flex-direction: column;
+      min-width: fit-content;
+      margin-right: 24px;
+      h3 {
+         padding-top: 36px;
+         span {
+            display: inline-flex;
+            align-items: center;
+            padding-left: 16px;
+         }
+      }
+      p {
+         font-size: 14px;
+         display: flex;
+         align-items: flex-end;
+         height: 100%;
+         margin: 0;
+         svg {
+            margin-left: 4px;
+         }
+      }
+   }
+   // .commentText {
+   //    overflow: hidden;
+   //    text-overflow: ellipsis;
+   // }
+}
+
+@media screen and (max-width: 1200px) {
+   .comment {
+      display: block;
+      .user {
+         flex-basis: 0;
+         margin: 0 0 36px;
+      }
+   }
+}

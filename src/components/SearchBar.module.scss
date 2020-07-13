@@ -1,0 +1,106 @@
+@import '../App';
+
+$height: 40px;
+.searchBar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 40%;
+   height: $height;
+   max-width: 620px;
+   border: 2px solid $darkBlue;
+   border-radius: 20px;
+   label {
+      font-size: 0;
+   }
+   input {
+      width: 100%;
+      margin: 0 8px 0 16px;
+      border: 0;
+      outline: none;
+   }
+   .cleanButton {
+      display: flex;
+      margin: 0 8px;
+      cursor: pointer;
+      opacity: 0.75;
+      font-size: 20px;
+      :hover {
+         opacity: 0.5;
+      }
+   }
+   .dropDown {
+      position: relative;
+      top: -2px;
+      right: -2px;
+      align-self: flex-start;
+   }
+   .dropDownButton {
+      position: relative;
+      z-index: 1;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $height;
+      padding: 0 24px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      white-space: nowrap;
+      color: white;
+      border-radius: 20px;
+      background-color: $darkBlue;
+      svg {
+         font-size: 16px;
+         margin-left: 8px;
+         stroke: white;
+      }
+      &:hover {
+         background-color: $Blue;
+      }
+   }
+   .dropList {
+      position: relative;
+      width: 274px;
+      margin: -14px 0 0;
+      padding-top: 15px;
+      border: 2px solid $darkBlue;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      outline: none;
+      background: white;
+      box-shadow: $shadowM !important;
+      button {
+         width: 100%;
+         padding: 4px 24px;
+         transition: ease-in-out background-color 0.25s;
+         text-align: start;
+         white-space: nowrap;
+         &:hover {
+            background-color: rgba(54, 72, 129, 0.1);
+         }
+         &:active {
+            color: white;
+            background-color: rgba(54, 72, 129, 0.3);
+         }
+      }
+   }
+}
+
+.searchBarActive {
+   border-color: $grayBlue;
+   .dropDownButton {
+      background-color: $grayBlue;
+   }
+}
+@media screen and (max-width: 1080px) {
+   .dropDownButton {
+      width: $height;
+      padding: 0 !important;
+      svg {
+         font-size: 20px !important;
+         margin-left: 0 !important;
+         fill: white;
+      }
+   }
+}

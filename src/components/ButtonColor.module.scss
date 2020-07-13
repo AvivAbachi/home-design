@@ -1,0 +1,13 @@
+.buttonColor {
+   width: 36px;
+   height: 36px;
+   margin: 0 4px;
+   cursor: pointer;
+   circle:first-of-type {
+      fill: none;
+      stroke-width: 1.5px;
+   }
+   &:hover {
+      opacity: 0.5;
+   }
+}

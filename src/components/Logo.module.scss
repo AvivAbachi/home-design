@@ -1,0 +1,14 @@
+.logo {
+   display: flex;
+   align-items: center;
+   width: fit-content;
+   white-space: nowrap;
+   h2 {
+      margin: 0;
+   }
+   svg {
+      width: 42px;
+      height: 42px;
+      margin-right: 8px;
+   }
+}

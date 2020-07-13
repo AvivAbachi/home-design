@@ -1,0 +1,33 @@
+@import '../App';
+.button {
+   font-size: 20px;
+   padding: 8px 16px;
+   cursor: pointer;
+   transition: ease-in-out background-color 0.25s, ease-in-out opacity 0.25s;
+   color: white;
+   border-radius: 100px;
+   background: $darkBlue;
+   box-shadow: $shadowM;
+   &:hover {
+      opacity: 1;
+      color: white;
+      background: $Blue;
+   }
+}
+.clean {
+   color: $darkBlue !important;
+   background: transparent !important;
+   box-shadow: none;
+   &:hover {
+      opacity: 0.5;
+   }
+}
+.border {
+   color: $darkBlue !important;
+   border: $darkBlue 1px solid !important;
+   background-color: transparent !important;
+   box-shadow: none;
+   &:hover {
+      opacity: 0.5;
+   }
+}

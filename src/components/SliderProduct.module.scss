@@ -1,0 +1,59 @@
+@import '../App';
+
+.carousel {
+   width: 100%;
+   min-width: 0;
+   max-width: 480px;
+   :global(.slick-track) {
+      display: flex;
+      align-items: center;
+   }
+   .carouselItem {
+      width: 100%;
+   }
+}
+.gallery {
+   width: min-content;
+   padding: 0 36px 0 84px;
+   :global(.slick-slide) {
+      width: fit-content !important;
+      transform: translateY(-44%);
+   }
+}
+.galleryMobile {
+   z-index: 1;
+   width: 100%;
+   :global(.slick-slide) {
+      margin: 32px 0 !important;
+   }
+}
+
+.galleryItem {
+   display: flex;
+   align-items: center;
+   width: 96px !important;
+   height: 96px;
+   margin: 8px;
+   padding: 8px;
+   cursor: pointer;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: $shadowS;
+   object-fit: contain;
+}
+@media screen and (max-width: 1080px) {
+   .carousel {
+      width: calc(90% - 72px);
+   }
+   .carouselItem {
+      max-height: 380px;
+      object-fit: contain;
+   }
+}
+@media screen and (max-width: 758px) {
+   .galleryItem {
+      width: 64px !important;
+      height: 64px;
+      margin: 0 auto !important;
+   }
+}
