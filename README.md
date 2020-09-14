@@ -1,6 +1,7 @@
 # Home design
 
 This is a react project base on my web design project [link](https://www.behance.net/gallery/97038619/Home-Design-Online-Store)
+
 ![GitHub Logo](/lighthouse.png)
 
 ## Installation and Setup Instructions
